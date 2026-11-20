@@ -1,0 +1,18 @@
+name: Prototype tests
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [urbanthread, medicare, novabank, talentbridge, quickbite]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run rule tests
+        working-directory: ${{ matrix.project }}/prototype
+        run: node --test

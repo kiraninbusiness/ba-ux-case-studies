@@ -19,7 +19,19 @@ Portfolio: https://kiraninbusiness.github.io/portfolio/
 
 ## Try the prototypes
 
-Each project has a working prototype in `<project>/prototype/`. To run them online, open the repo Settings, then Pages, choose the `main` branch and the root folder, and save. To run locally, open any `prototype/index.html` in a browser.
+Each project has a working app in `<project>/prototype/`. It runs in the browser with no build step and no network calls, and keeps its data in your browser's local storage.
+
+| Project | What you can do |
+|---|---|
+| [UrbanThread](urbanthread/prototype/) | Search and filter products, wishlist, guest checkout, order tracking |
+| [MediCare Plus](medicare/prototype/) | Book, reschedule and check in as a patient; shared calendar for staff; doctor day list |
+| [NovaBank](novabank/prototype/) | Add a beneficiary with a one-time code, transfer within limits, search transactions (demo PIN 2468) |
+| [TalentBridge](talentbridge/prototype/) | Pipeline board, shortlist and weekly report by role, interview scheduling |
+| [QuickBite](quickbite/prototype/) | Customer, restaurant, rider and manager views; open two tabs to see them sync |
+
+To run them online, open the repo Settings, then Pages, choose the `main` branch and the root folder, and save. To run locally, open any `prototype/index.html` in a browser.
+
+**Tests:** each prototype keeps its business rules in `logic.js` with tests in `logic.test.js`. Run `node --test` inside a prototype folder (Node 18 or later). GitHub runs all five on every push (`.github/workflows/ci.yml`). Each prototype's README maps its requirements to code and tests, and says plainly what is real and what is simulated.
 
 ## What each folder contains
 
